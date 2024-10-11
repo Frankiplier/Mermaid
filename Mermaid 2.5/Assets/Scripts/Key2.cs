@@ -22,6 +22,9 @@ public class Key2 : MonoBehaviour
         if (isVisible == true && Input.GetKey(KeyCode.E))
         {
             keyRoom2.haveKey2 = true;
+            
+            icon.SetActive(false);
+            GetComponent<CapsuleCollider>().enabled = false;
         }
     }
 
