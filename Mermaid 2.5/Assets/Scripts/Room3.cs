@@ -7,6 +7,7 @@ public class Room3 : MonoBehaviour
 {
     public string sceneName;
     [SerializeField] Animator transitionAnim;
+    [SerializeField] public KeyRoom3 keyRoom3;
 
     [SerializeField] GameObject icon;
     private bool isVisible;
@@ -19,7 +20,7 @@ public class Room3 : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKey(KeyCode.E) && isVisible == true)
+        if (Input.GetKey(KeyCode.E) && isVisible == true && keyRoom3.haveKey3 == true)
         {
             StartCoroutine(LoadLevel());
         }

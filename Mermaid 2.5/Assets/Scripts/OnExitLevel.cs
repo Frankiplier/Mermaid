@@ -9,7 +9,9 @@ public class OnExitLevel : MonoBehaviour
     public bool isNextScene = true;
     public bool isSwitching;
 
+
     [SerializeField] public SceneInfo sceneInfo;
+    [SerializeField] public KeyRoom2 keyRoom2;
     [SerializeField] Animator transitionAnim;
 
     void Start()
@@ -19,15 +21,26 @@ public class OnExitLevel : MonoBehaviour
 
     void Update()
     {
-        if (isSwitching == true)
+        if (isSwitching == true && keyRoom2.haveKey2 == true)
         {
             StartCoroutine(LoadLevel());
         }
     }
 
-    void OnTriggerEnter (Collider player)
+    void OnTriggerEnter (Collider other)
     {
-        isSwitching = true;
+        if (other.tag == "Player")
+        {
+            isSwitching = true;
+        }
+    }
+
+    void OnTriggerExit (Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            isSwitching = false;
+        }
     }
 
     IEnumerator LoadLevel()
