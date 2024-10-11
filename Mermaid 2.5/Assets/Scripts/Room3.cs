@@ -3,23 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene3 : MonoBehaviour
+public class Room3 : MonoBehaviour
 {
     public string sceneName;
+    [SerializeField] Animator transitionAnim;
+
     [SerializeField] GameObject icon;
     private bool isVisible;
+    public bool isSwitching;
 
     public void Start()
     {
         icon.SetActive(false);
         isVisible = false;
+        isSwitching = false;
     }
 
     public void Update()
     {
-        if (isVisible == true && Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(sceneName);
+            if (isVisible == true && isSwitching == true)
+            {
+                StartCoroutine(LoadLevel());
+            }
         }
     }
 
@@ -27,11 +34,22 @@ public class Scene3 : MonoBehaviour
     {
         icon.SetActive(true);
         isVisible = true;    
+        isSwitching = true;
     }
 
     void OnTriggerExit (Collider player)
     {
         icon.SetActive(false);
         isVisible = false;
+        isSwitching = false;
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transitionAnim.SetTrigger("End");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(sceneName);
     }
 }
