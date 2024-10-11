@@ -1319,7 +1319,7 @@ GameObject:
   - component: {fileID: 2092742637}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1489,6 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basilisk: {fileID: 156603194}
+  player: {fileID: 2092742629}
   canHide: 0
   isHiding: 0
 --- !u!1660057539 &9223372036854775807
