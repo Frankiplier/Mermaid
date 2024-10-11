@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 27515563}
   - component: {fileID: 27515562}
   - component: {fileID: 27515561}
+  - component: {fileID: 27515567}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -277,6 +278,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27515567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27515560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0489eedf143bc5a468c8b2bc81aa7ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entrance: {fileID: 0}
+  exit: {fileID: 672135134}
+  sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
+  offsetEntrance: {x: 0, y: 0, z: 0}
+  offsetExit: {x: 2, y: 0, z: 0}
 --- !u!1 &672135134
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,8 +307,8 @@ GameObject:
   - component: {fileID: 672135140}
   - component: {fileID: 672135139}
   - component: {fileID: 672135138}
-  - component: {fileID: 672135137}
   - component: {fileID: 672135136}
+  - component: {fileID: 672135141}
   m_Layer: 0
   m_Name: Door room 2
   m_TagString: Untagged
@@ -334,19 +352,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.48618174}
   m_Center: {x: 0, y: 0, z: -0.24309087}
---- !u!114 &672135137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672135134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb409be04eacc1449c551372619f7c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneBuildIndex: 1
 --- !u!64 &672135138
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -419,6 +424,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672135134}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &672135141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672135134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cdd4f5fdaaf1e4186fa32994728f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Room 2
+  isNextScene: 0
+  sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
 --- !u!1 &931889013
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +736,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 27515566}
   - {fileID: 1543420240}
   - {fileID: 931889016}
+  - {fileID: 27515566}
   - {fileID: 1712406807}

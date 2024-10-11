@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 78407682}
   - component: {fileID: 78407681}
   - component: {fileID: 78407680}
-  - component: {fileID: 78407679}
   - component: {fileID: 78407678}
+  - component: {fileID: 78407683}
   m_Layer: 0
   m_Name: Door room 1
   m_TagString: Untagged
@@ -180,19 +180,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0227968, y: 1, z: 0.5376209}
   m_Center: {x: 0.011399058, y: 0, z: 0.26530105}
---- !u!114 &78407679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78407676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb409be04eacc1449c551372619f7c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneBuildIndex: 0
 --- !u!64 &78407680
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -265,6 +252,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78407676}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &78407683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78407676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cdd4f5fdaaf1e4186fa32994728f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Room 1
+  isNextScene: 0
+  sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
 --- !u!1 &849771709
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,8 +279,8 @@ GameObject:
   - component: {fileID: 849771715}
   - component: {fileID: 849771714}
   - component: {fileID: 849771713}
-  - component: {fileID: 849771712}
   - component: {fileID: 849771711}
+  - component: {fileID: 849771716}
   m_Layer: 0
   m_Name: Door room 3
   m_TagString: Untagged
@@ -322,19 +324,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.48618174}
   m_Center: {x: 0, y: 0, z: -0.24309087}
---- !u!114 &849771712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849771709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb409be04eacc1449c551372619f7c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneBuildIndex: 2
 --- !u!64 &849771713
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -407,6 +396,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849771709}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &849771716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849771709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cdd4f5fdaaf1e4186fa32994728f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Room 3
+  isNextScene: 1
+  sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
 --- !u!1 &1006983008
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +719,7 @@ GameObject:
   - component: {fileID: 2092742631}
   - component: {fileID: 2092742630}
   - component: {fileID: 2092742629}
+  - component: {fileID: 2092742635}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -855,6 +860,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2092742635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092742628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0489eedf143bc5a468c8b2bc81aa7ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entrance: {fileID: 849771709}
+  exit: {fileID: 78407676}
+  sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
+  offsetEntrance: {x: -2, y: 0, z: 0}
+  offsetExit: {x: 0, y: 0, z: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
