@@ -35,6 +35,11 @@
             "name": "Keyboard",
             "bindingGroup": "Keyboard",
             "devices": []
+        },
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
+            "devices": []
         }
     ]
 }
