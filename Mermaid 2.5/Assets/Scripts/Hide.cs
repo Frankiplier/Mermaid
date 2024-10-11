@@ -4,24 +4,46 @@ using UnityEngine;
 
 public class Hide : MonoBehaviour
 {
+    [SerializeField] Basilisk basilisk;
+    [SerializeField] PlayerMovement player;
+
+    public bool canHide = false;
     public bool isHiding = false;
     
     void Start()
     {
         isHiding = false;
+        canHide = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (canHide == true && basilisk.mustHide == true && Input.GetKey(KeyCode.E))
         {
             isHiding = true;
+            player.moveSpeed = 0;
         }
 
-        else
+        if (isHiding == false)
         {
-            isHiding = false;
+            player.moveSpeed = 3;
         }
     }
+
+    void OnTriggerEnter (Collider other)
+    {
+        if (other.tag == "Hiding")
+        {
+            canHide = true;
+        }
+    }
+
+    void OnTriggerExit (Collider other)
+    {
+        if (other.tag == "Hiding")
+        {
+            canHide = false;
+        }
+    }
+
 }

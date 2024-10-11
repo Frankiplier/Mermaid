@@ -6,15 +6,16 @@ public class Basilisk : MonoBehaviour
 {
     [SerializeField] Hide hide;
     private float targetTime;
+    public bool mustHide;
 
     public AudioSource danger;
 
     void Start()
     {
         targetTime = Random.Range(5, 10);
+        mustHide = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         targetTime -= Time.deltaTime;
@@ -31,6 +32,8 @@ public class Basilisk : MonoBehaviour
     {
         Debug.Log("Music starts playing");
 
+        mustHide = true;
+
         yield return new WaitForSeconds(5);
 
         if (hide.isHiding == true)
@@ -41,6 +44,8 @@ public class Basilisk : MonoBehaviour
         else if (hide.isHiding == false)
         {
             Debug.Log("You died");
+
+            mustHide = false;
         }
     }
 
@@ -49,5 +54,8 @@ public class Basilisk : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         Debug.Log("Music stops");
+
+        hide.isHiding = false;
+        mustHide = false;
     }
 }
