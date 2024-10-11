@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33924659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33924661}
+  - component: {fileID: 33924660}
+  m_Layer: 0
+  m_Name: Basilisk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &33924660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33924659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16198db85ee2cec478dcceb4a66cd9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hide: {fileID: 111290609}
+  danger: {fileID: 0}
+--- !u!4 &33924661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33924659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &111290599
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +183,7 @@ GameObject:
   - component: {fileID: 111290605}
   - component: {fileID: 111290606}
   - component: {fileID: 111290607}
+  - component: {fileID: 111290609}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -296,6 +343,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &111290609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111290599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5184cfdb219cf46ad3ff0883700263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHiding: 0
 --- !u!1 &491941157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,3 +1243,4 @@ SceneRoots:
   - {fileID: 1866508027}
   - {fileID: 1782186424}
   - {fileID: 1316945113}
+  - {fileID: 33924661}
