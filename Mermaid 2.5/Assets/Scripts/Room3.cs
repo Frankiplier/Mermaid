@@ -10,23 +10,18 @@ public class Room3 : MonoBehaviour
 
     [SerializeField] GameObject icon;
     private bool isVisible;
-    public bool isSwitching;
 
     public void Start()
     {
         icon.SetActive(false);
         isVisible = false;
-        isSwitching = false;
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) && isVisible == true)
         {
-            if (isVisible == true && isSwitching == true)
-            {
-                StartCoroutine(LoadLevel());
-            }
+            StartCoroutine(LoadLevel());
         }
     }
 
@@ -34,21 +29,19 @@ public class Room3 : MonoBehaviour
     {
         icon.SetActive(true);
         isVisible = true;    
-        isSwitching = true;
     }
 
     void OnTriggerExit (Collider player)
     {
         icon.SetActive(false);
         isVisible = false;
-        isSwitching = false;
     }
 
     IEnumerator LoadLevel()
     {
         transitionAnim.SetTrigger("End");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         SceneManager.LoadScene(sceneName);
     }

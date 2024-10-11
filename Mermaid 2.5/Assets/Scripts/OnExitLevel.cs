@@ -34,7 +34,7 @@ public class OnExitLevel : MonoBehaviour
     {
         transitionAnim.SetTrigger("End");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         sceneInfo.isNextScene = isNextScene;
         SceneManager.LoadScene(sceneName);
