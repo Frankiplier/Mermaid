@@ -8,8 +8,10 @@ public class OnEnterLevel : MonoBehaviour
     public GameObject exit;
 
     [SerializeField] public SceneInfo sceneInfo;
-    public Vector3 offsetEntrance = new Vector3(1, 0.5f, 0);
-    public Vector3 offsetExit = new Vector3(-1, 0.5f, 0);
+
+    public Vector3 offsetEntrance = new Vector3(0, 0, 0);
+    public Vector3 offsetExit = new Vector3(0, 0, 0);
+
     private Rigidbody rb;
 
     void Awake()
