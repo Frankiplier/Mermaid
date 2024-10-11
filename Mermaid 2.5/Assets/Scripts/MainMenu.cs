@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
         credits.SetActive(false);
         creditsEnabled = false;
         
-        gameObject.GetComponent<Button>().onClick.AddListener(Credits);
+        //gameObject.GetComponent<Button>().onClick.AddListener(Credits);
     }
 
     public void PlayGame()
