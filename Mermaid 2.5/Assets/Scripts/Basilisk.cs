@@ -22,7 +22,7 @@ public class Basilisk : MonoBehaviour
     {
         gameplay.volume = 0.3f;
 
-        targetTime = Random.Range(5, 10);
+        targetTime = Random.Range(20, 30);
         mustHide = false;
 
         basilisk.SetActive(false);
