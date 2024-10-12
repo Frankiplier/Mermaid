@@ -434,9 +434,11 @@ GameObject:
   m_Component:
   - component: {fileID: 386062930}
   - component: {fileID: 386062929}
+  - component: {fileID: 386062931}
+  - component: {fileID: 386062932}
   m_Layer: 0
   m_Name: Dead Monster
-  m_TagString: Untagged
+  m_TagString: Endgame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,6 +510,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &386062931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386062928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e5ab8fe65887346bb674259e1ded12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canPickUp: 0
+  canEnd: 0
+--- !u!65 &386062932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386062928}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2633333, y: 1.9683334, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &425912051
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +1018,8 @@ GameObject:
   - component: {fileID: 714972490}
   - component: {fileID: 714972492}
   - component: {fileID: 714972491}
+  - component: {fileID: 714972494}
+  - component: {fileID: 714972495}
   m_Layer: 0
   m_Name: Door Sawa
   m_TagString: Untagged
@@ -1077,6 +1116,42 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &714972494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714972489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ed17ac2d6214d42981eb75a566fdb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endgame: {fileID: 386062931}
+  canUnlock: 0
+  sceneName: Win
+--- !u!65 &714972495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714972489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1713228, y: 2.4514968, z: 0.5538871}
+  m_Center: {x: -0.049598694, y: 0.16308677, z: -0.1769422}
 --- !u!1 &715719085
 GameObject:
   m_ObjectHideFlags: 0

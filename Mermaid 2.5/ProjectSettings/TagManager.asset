@@ -8,6 +8,7 @@ TagManager:
   - Key2
   - Key3
   - Mirror
+  - Endgame
   layers:
   - Default
   - TransparentFX
