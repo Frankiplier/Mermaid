@@ -22,12 +22,18 @@ public class Mirror : MonoBehaviour
         {
             mirror.SetActive(true);
             isActive = true;
+
+            Cursor.visible = true; 
+            Cursor.lockState = CursorLockMode.None;
         }
 
         else if (isActive == true && Input.GetKeyDown(KeyCode.E))
         {
             mirror.SetActive(false);
             isActive = false;
+
+            Cursor.visible = false; 
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
