@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    public Animator playerAnimation;
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,6 +34,32 @@ public class PlayerMovement : MonoBehaviour
 
         // handle drag
         rb.drag = groundDrag;
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            playerAnimation.Play("Back walk");
+        }
+
+        else if (Input.GetKey(KeyCode.A))
+        {
+             playerAnimation.Play("Left walk");
+        }
+
+        else if (Input.GetKey(KeyCode.S))
+        {
+            playerAnimation.Play("Front walk");
+        }
+
+        else if (Input.GetKey(KeyCode.D))
+        {
+             playerAnimation.Play("Right walk");
+        }
+
+        else
+        {
+             playerAnimation.Play("Idle");
+
+        }
     }
 
     void FixedUpdate()

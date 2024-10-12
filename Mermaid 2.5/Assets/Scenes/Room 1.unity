@@ -278,6 +278,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 111290603}
+  playerAnimation: {fileID: 111290610}
 --- !u!114 &111290607
 MonoBehaviour:
   m_ObjectHideFlags: 0
