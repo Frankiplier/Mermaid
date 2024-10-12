@@ -23,7 +23,7 @@ public class Basilisk : MonoBehaviour
 
     void Start()
     {
-        gameplay.volume = 0.3f;
+        gameplay.volume = 1f;
 
         targetTime = Random.Range(10, 15);
         mustHide = false;
@@ -65,7 +65,7 @@ public class Basilisk : MonoBehaviour
     IEnumerator Jumpscare()
     {
         danger.Play();
-        gameplay.volume = 0.1f;
+        gameplay.volume = 0.3f;
 
         mustHide = true;
 
@@ -101,6 +101,6 @@ public class Basilisk : MonoBehaviour
         mustHide = false;
         PauseMenu.canPause = true;
 
-        gameplay.volume = 0.3f;
+        gameplay.volume = 1f;
     }
 }
