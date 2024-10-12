@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyes: {fileID: 1989786683}
   hide: {fileID: 2092742637}
+  pauseMenu: {fileID: 1645633708}
   basilisk: {fileID: 1917896666}
   mustHide: 0
   danger: {fileID: 0}

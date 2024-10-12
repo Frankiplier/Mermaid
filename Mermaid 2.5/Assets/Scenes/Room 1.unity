@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyes: {fileID: 756606842}
   hide: {fileID: 111290609}
+  pauseMenu: {fileID: 799109188}
   basilisk: {fileID: 1206067751}
   mustHide: 0
   danger: {fileID: 0}

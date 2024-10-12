@@ -6,6 +6,7 @@ public class Basilisk : MonoBehaviour
 {
     [SerializeField] Animator eyes;
     [SerializeField] Hide hide;
+    [SerializeField] PauseMenu pauseMenu;
     public GameObject basilisk;
     private float targetTime;
     public bool mustHide;
@@ -67,11 +68,13 @@ public class Basilisk : MonoBehaviour
 
     IEnumerator Hide()
     {
+        PauseMenu.canPause = false;
         basilisk.SetActive(true);
         eyes.Play("Eyes");
 
         yield return new WaitForSeconds(5);
         hide.isHiding = false;
         mustHide = false;
+        PauseMenu.canPause = true;
     }
 }
