@@ -1129,6 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endgame: {fileID: 386062931}
+  transitionAnim: {fileID: 606965846}
   canUnlock: 0
   sceneName: Win
 --- !u!65 &714972495

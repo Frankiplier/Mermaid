@@ -2,29 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key2 : MonoBehaviour
+public class Picture : MonoBehaviour
 {
-    [SerializeField] public KeyRoom2 keyRoom2;
-    [SerializeField] Picture picture;
-    public bool canOpen = false;
-
-    [SerializeField] MirrorInfo pickedPieces;
-    [SerializeField] int index;
-    public bool canPickUp = false;
-
     public SpriteRenderer spriteRenderer;
     public Sprite openSprite;
+    
+    public bool canOpen = false;
+    public bool chestKey = false;
 
 
     void Update()
     {
-        if (canOpen == true && Input.GetKeyDown(KeyCode.E) && picture.chestKey == true)
+        if (canOpen == true && Input.GetKeyDown(KeyCode.E))
         {
             spriteRenderer.sprite = openSprite;
-            keyRoom2.haveKey2 = true;
-            pickedPieces.pickedUpPieces[index] = true;
-            
-            GetComponent<CapsuleCollider>().enabled = false;
+            chestKey = true;
         }
     }
 

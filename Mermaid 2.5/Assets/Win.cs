@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Win : MonoBehaviour
 {
     [SerializeField] Endgame endgame;
+    [SerializeField] Animator transitionAnim;
     public bool canUnlock = false;
     public string sceneName;
  
@@ -13,7 +14,7 @@ public class Win : MonoBehaviour
     {
         if (canUnlock == true && endgame.canEnd == true && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(sceneName);
+            StartCoroutine(LoadLevel());
         }
     }
 
@@ -31,5 +32,14 @@ public class Win : MonoBehaviour
         {
             canUnlock = false;
         }
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transitionAnim.SetTrigger("End");
+
+        yield return new WaitForSeconds(0.5f);
+
+        SceneManager.LoadScene(sceneName);
     }
 }
