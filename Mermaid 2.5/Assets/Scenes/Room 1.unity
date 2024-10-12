@@ -160,7 +160,6 @@ MonoBehaviour:
   pauseMenu: {fileID: 799109188}
   basilisk: {fileID: 1206067751}
   mustHide: 0
-  basiliskIsActive: 0
   danger: {fileID: 33924662}
   gameplay: {fileID: 33924663}
   exit: {fileID: 33924664}
@@ -591,7 +590,7 @@ MonoBehaviour:
   exit: {fileID: 491941157}
   sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
   offsetEntrance: {x: 0, y: 0, z: 2}
-  offsetExit: {x: -2, y: 0, z: 0}
+  offsetExit: {x: -2, y: 0, z: -1}
 --- !u!212 &111290608
 SpriteRenderer:
   m_ObjectHideFlags: 0
