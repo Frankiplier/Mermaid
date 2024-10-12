@@ -6,13 +6,11 @@ public class Key2 : MonoBehaviour
 {
     [SerializeField] public KeyRoom2 keyRoom2;
 
-    [SerializeField] GameObject icon;
     public bool isVisible = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        icon.SetActive(false);
         isVisible = false;
     }
 
@@ -23,7 +21,6 @@ public class Key2 : MonoBehaviour
         {
             keyRoom2.haveKey2 = true;
             
-            icon.SetActive(false);
             GetComponent<CapsuleCollider>().enabled = false;
         }
     }
@@ -32,7 +29,6 @@ public class Key2 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            icon.SetActive(true);
             isVisible = true;
         }
     }
@@ -41,7 +37,6 @@ public class Key2 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            icon.SetActive(false);
             isVisible = false;
         }
     }

@@ -9,12 +9,10 @@ public class Room3 : MonoBehaviour
     [SerializeField] Animator transitionAnim;
     [SerializeField] public KeyRoom3 keyRoom3;
 
-    [SerializeField] GameObject icon;
     private bool isVisible;
 
     public void Start()
     {
-        icon.SetActive(false);
         isVisible = false;
     }
 
@@ -28,13 +26,11 @@ public class Room3 : MonoBehaviour
 
     void OnTriggerEnter (Collider player)
     {
-        icon.SetActive(true);
         isVisible = true;    
     }
 
     void OnTriggerExit (Collider player)
     {
-        icon.SetActive(false);
         isVisible = false;
     }
 
