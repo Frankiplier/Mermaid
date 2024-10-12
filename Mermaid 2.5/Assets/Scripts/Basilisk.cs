@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Basilisk : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class Basilisk : MonoBehaviour
     public AudioSource gameplay;
     public AudioSource exit;
 
+    public string sceneName;
+
     void Start()
     {
         gameplay.volume = 0.3f;
 
-        targetTime = Random.Range(20, 40);
+        targetTime = Random.Range(5, 10);
         mustHide = false;
 
         basilisk.SetActive(false);
@@ -63,9 +66,10 @@ public class Basilisk : MonoBehaviour
             StartCoroutine(Hide());
         }
 
-        else if (hide.isHiding == false)
+        else if (hide.isHiding == false && mustHide == true)
         {
             Debug.Log("You died");
+            SceneManager.LoadScene(sceneName);
 
             mustHide = false;
         }
@@ -78,14 +82,15 @@ public class Basilisk : MonoBehaviour
 
         PauseMenu.canPause = false;
         basilisk.SetActive(true);
+
         eyes.Play("Eyes");
 
         yield return new WaitForSeconds(5);
+
         hide.isHiding = false;
         mustHide = false;
         PauseMenu.canPause = true;
 
-        //exit.Play();
         gameplay.volume = 0.3f;
     }
 }
