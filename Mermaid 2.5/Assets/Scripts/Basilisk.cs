@@ -12,10 +12,14 @@ public class Basilisk : MonoBehaviour
     public bool mustHide;
 
     public AudioSource danger;
+    public AudioSource gameplay;
+    public AudioSource exit;
 
     void Start()
     {
-        targetTime = Random.Range(5, 10);
+        gameplay.volume = 0.3f;
+
+        targetTime = Random.Range(20, 40);
         mustHide = false;
 
         basilisk.SetActive(false);
@@ -29,12 +33,13 @@ public class Basilisk : MonoBehaviour
         {
             StartCoroutine(Jumpscare());
 
-            targetTime = Random.Range(12, 20);
+            targetTime = Random.Range(30, 60);
         }
 
         else if (hide.isHiding == true)
         {
             StopCoroutine(Jumpscare());
+            danger.Stop();
             StartCoroutine(Hide());
         }
 
@@ -46,11 +51,12 @@ public class Basilisk : MonoBehaviour
 
     IEnumerator Jumpscare()
     {
-        Debug.Log("Music starts playing");
+        danger.Play();
+        gameplay.volume = 0.1f;
 
         mustHide = true;
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
 
         if (hide.isHiding == true)
         {
@@ -68,6 +74,8 @@ public class Basilisk : MonoBehaviour
 
     IEnumerator Hide()
     {
+        gameplay.volume = 0f;
+
         PauseMenu.canPause = false;
         basilisk.SetActive(true);
         eyes.Play("Eyes");
@@ -76,5 +84,8 @@ public class Basilisk : MonoBehaviour
         hide.isHiding = false;
         mustHide = false;
         PauseMenu.canPause = true;
+
+        //exit.Play();
+        gameplay.volume = 0.3f;
     }
 }
