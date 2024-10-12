@@ -95,7 +95,7 @@ public class Basilisk : MonoBehaviour
 
         eyes.Play("Eyes");
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(6.5f);
 
         hide.isHiding = false;
         mustHide = false;
