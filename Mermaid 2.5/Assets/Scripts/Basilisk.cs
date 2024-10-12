@@ -68,7 +68,7 @@ public class Basilisk : MonoBehaviour
     IEnumerator Hide()
     {
         basilisk.SetActive(true);
-        eyes.SetTrigger("Start");
+        eyes.Play("Eyes");
 
         yield return new WaitForSeconds(5);
         hide.isHiding = false;
