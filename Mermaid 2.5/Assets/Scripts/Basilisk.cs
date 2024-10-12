@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Basilisk : MonoBehaviour
 {
+    [SerializeField] Animator eyes;
     [SerializeField] Hide hide;
+    public GameObject basilisk;
     private float targetTime;
     public bool mustHide;
 
@@ -14,6 +16,8 @@ public class Basilisk : MonoBehaviour
     {
         targetTime = Random.Range(5, 10);
         mustHide = false;
+
+        basilisk.SetActive(false);
     }
 
     void Update()
@@ -25,6 +29,11 @@ public class Basilisk : MonoBehaviour
             StartCoroutine(Jumpscare());
 
             targetTime = Random.Range(12, 20);
+        }
+
+        if (hide.isHiding == false)
+        {
+            basilisk.SetActive(false);
         }
     }
 
@@ -51,10 +60,10 @@ public class Basilisk : MonoBehaviour
 
     IEnumerator Hide()
     {
+        basilisk.SetActive(true);
+        eyes.SetTrigger("Start");
+
         yield return new WaitForSeconds(5);
-
-        Debug.Log("Music stops");
-
         hide.isHiding = false;
         mustHide = false;
     }
