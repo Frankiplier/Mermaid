@@ -881,7 +881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &606965845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,7 +966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23, y: 44}
+  m_AnchoredPosition: {x: 4, y: -34}
   m_SizeDelta: {x: 1000, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663555567
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51ad051aaeb5a1f489e04f5aecc160ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2363dcdce4722224098bb92e5398729e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1556,7 +1556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55, y: -48}
+  m_AnchoredPosition: {x: -55, y: -49}
   m_SizeDelta: {x: 1000, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &846397028
@@ -2469,7 +2469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: -38}
+  m_AnchoredPosition: {x: -2, y: 44}
   m_SizeDelta: {x: 1000, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138408419
@@ -2492,7 +2492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2363dcdce4722224098bb92e5398729e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51ad051aaeb5a1f489e04f5aecc160ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3054,7 +3054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39, y: 38}
+  m_AnchoredPosition: {x: 40, y: 35}
   m_SizeDelta: {x: 1000, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539512462
@@ -3320,7 +3320,7 @@ GameObject:
   - component: {fileID: 1691672337}
   - component: {fileID: 1691672336}
   m_Layer: 0
-  m_Name: Mirror Piece 3
+  m_Name: Mirror Piece 4
   m_TagString: Mirror
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3360,7 +3360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickedPieces: {fileID: 11400000, guid: 494c7311ab209f743ab047010f6a82f4, type: 2}
-  index: 2
+  index: 3
   piece: {fileID: 1691672335}
   canPickUp: 0
 --- !u!212 &1691672338
@@ -3831,7 +3831,7 @@ GameObject:
   - component: {fileID: 1817839531}
   - component: {fileID: 1817839530}
   m_Layer: 0
-  m_Name: Mirror Piece 4
+  m_Name: Mirror Piece 3
   m_TagString: Mirror
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3871,7 +3871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickedPieces: {fileID: 11400000, guid: 494c7311ab209f743ab047010f6a82f4, type: 2}
-  index: 3
+  index: 2
   piece: {fileID: 1817839529}
   canPickUp: 0
 --- !u!212 &1817839532
@@ -4434,5 +4434,5 @@ SceneRoots:
   - {fileID: 1937851940}
   - {fileID: 1277284670}
   - {fileID: 93873483}
-  - {fileID: 1691672339}
   - {fileID: 1817839533}
+  - {fileID: 1691672339}
