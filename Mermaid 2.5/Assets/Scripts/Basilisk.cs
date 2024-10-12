@@ -23,7 +23,7 @@ public class Basilisk : MonoBehaviour
 
     void Start()
     {
-        gameplay.volume = 1f;
+        gameplay.volume = 0.6f;
 
         targetTime = Random.Range(10, 15);
         mustHide = false;
@@ -101,6 +101,6 @@ public class Basilisk : MonoBehaviour
         mustHide = false;
         PauseMenu.canPause = true;
 
-        gameplay.volume = 1f;
+        gameplay.volume = 0.6f;
     }
 }
