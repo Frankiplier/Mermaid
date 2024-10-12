@@ -2842,10 +2842,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16198db85ee2cec478dcceb4a66cd9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedPieces: {fileID: 11400000, guid: 494c7311ab209f743ab047010f6a82f4, type: 2}
   eyes: {fileID: 1989786683}
   hide: {fileID: 760511355}
   pauseMenu: {fileID: 1645633708}
   basilisk: {fileID: 1917896666}
+  deadMonster: {fileID: 0}
   mustHide: 0
   danger: {fileID: 1162437384}
   gameplay: {fileID: 1162437383}

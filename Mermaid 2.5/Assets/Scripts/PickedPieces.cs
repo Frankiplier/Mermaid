@@ -13,7 +13,6 @@ public class PickedPieces : MonoBehaviour
         piece.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (pickedPieces.pickedUpPieces[index] == true)

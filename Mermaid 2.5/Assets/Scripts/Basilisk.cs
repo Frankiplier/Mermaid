@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Basilisk : MonoBehaviour
 {
+    [SerializeField] MirrorInfo pickedPieces;
     [SerializeField] Animator eyes;
     [SerializeField] Hide hide;
     [SerializeField] PauseMenu pauseMenu;
     public GameObject basilisk;
+    public GameObject deadMonster;
     private float targetTime;
     public bool mustHide;
+
 
     public AudioSource danger;
     public AudioSource gameplay;
@@ -22,10 +25,11 @@ public class Basilisk : MonoBehaviour
     {
         gameplay.volume = 0.3f;
 
-        targetTime = Random.Range(20, 30);
+        targetTime = Random.Range(10, 15);
         mustHide = false;
 
         basilisk.SetActive(false);
+        deadMonster.SetActive(false);
     }
 
     void Update()
@@ -44,6 +48,12 @@ public class Basilisk : MonoBehaviour
             StopCoroutine(Jumpscare());
             danger.Stop();
             StartCoroutine(Hide());
+
+            if ((pickedPieces.pickedUpPieces[0] == true && pickedPieces.pickedUpPieces[1] == true && pickedPieces.pickedUpPieces[2] == true && pickedPieces.pickedUpPieces[3] == true))
+            {
+                deadMonster.SetActive(true);
+                targetTime = 1000;
+            }
         }
 
         else if (hide.isHiding == false)
