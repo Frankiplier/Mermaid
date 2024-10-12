@@ -31,7 +31,13 @@ public class Basilisk : MonoBehaviour
             targetTime = Random.Range(12, 20);
         }
 
-        if (hide.isHiding == false)
+        else if (hide.isHiding == true)
+        {
+            StopCoroutine(Jumpscare());
+            StartCoroutine(Hide());
+        }
+
+        else if (hide.isHiding == false)
         {
             basilisk.SetActive(false);
         }
@@ -56,6 +62,7 @@ public class Basilisk : MonoBehaviour
 
             mustHide = false;
         }
+        
     }
 
     IEnumerator Hide()
