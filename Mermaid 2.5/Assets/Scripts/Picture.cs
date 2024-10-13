@@ -25,6 +25,9 @@ public class Picture : MonoBehaviour
             chestKey = true;
 
             chestKey1.SetActive(true);
+
+            canOpen = false;
+            GetComponent<CapsuleCollider>().enabled = false;
         }
     }
 

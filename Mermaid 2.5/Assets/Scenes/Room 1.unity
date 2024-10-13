@@ -330,9 +330,9 @@ MonoBehaviour:
   basilisk: {fileID: 1206067751}
   deadMonster: {fileID: 0}
   mustHide: 0
+  isDead: 0
   danger: {fileID: 33924662}
   gameplay: {fileID: 33924663}
-  exit: {fileID: 33924664}
   sceneName: Death
 --- !u!4 &33924661
 Transform:
@@ -2566,6 +2566,18 @@ MonoBehaviour:
       - m_Target: {fileID: 799109188}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6353,7 +6365,7 @@ Transform:
   m_GameObject: {fileID: 895562965}
   serializedVersion: 2
   m_LocalRotation: {x: -0.564579, y: -0.4257357, z: 0.4257345, w: -0.5645793}
-  m_LocalPosition: {x: 0.8622907, y: -0.84, z: -4.34}
+  m_LocalPosition: {x: 0.8622907, y: -1.606, z: -3.323}
   m_LocalScale: {x: 0.50503004, y: 0.5050301, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6533,6 +6545,18 @@ MonoBehaviour:
       - m_Target: {fileID: 799109188}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

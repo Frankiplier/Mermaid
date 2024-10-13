@@ -13,11 +13,11 @@ public class Basilisk : MonoBehaviour
     public GameObject deadMonster;
     private float targetTime;
     public bool mustHide;
+    public bool isDead = false;
 
 
     public AudioSource danger;
     public AudioSource gameplay;
-    public AudioSource exit;
 
     public string sceneName;
 
@@ -52,6 +52,7 @@ public class Basilisk : MonoBehaviour
             if ((pickedPieces.pickedUpPieces[0] == true && pickedPieces.pickedUpPieces[1] == true && pickedPieces.pickedUpPieces[2] == true && pickedPieces.pickedUpPieces[3] == true))
             {
                 deadMonster.SetActive(true);
+                isDead = true;
                 targetTime = 1000;
             }
         }

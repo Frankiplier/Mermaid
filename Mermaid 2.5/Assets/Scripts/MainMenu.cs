@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(StartSound());
     }
 
     public void Credits()
@@ -31,6 +31,18 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        StartCoroutine(ExitSound());
+    }
+
+    IEnumerator StartSound()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator ExitSound()
+    {
+        yield return new WaitForSeconds(0.5f);
         Application.Quit();
     }
 }
