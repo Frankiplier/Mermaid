@@ -1315,7 +1315,7 @@ Transform:
   m_GameObject: {fileID: 386062928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.257, y: 1.357, z: -0.701}
+  m_LocalPosition: {x: -0.257, y: 1.4, z: -0.701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2704,6 +2704,7 @@ GameObject:
   - component: {fileID: 714972491}
   - component: {fileID: 714972494}
   - component: {fileID: 714972495}
+  - component: {fileID: 714972496}
   m_Layer: 0
   m_Name: Door Sawa
   m_TagString: Untagged
@@ -2720,7 +2721,7 @@ Transform:
   m_GameObject: {fileID: 714972489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.879, y: 1.07, z: 4.93}
+  m_LocalPosition: {x: 1.879, y: 1.24, z: 4.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2767,7 +2768,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53a6ae99bee89ce41aaa23f93b2a996b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40aa7a981100e8b4c9c6313a5a9c4883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2813,11 +2814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endgame: {fileID: 386062931}
-  transitionAnim: {fileID: 606965846}
-  sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
   canUnlock: 0
   sceneName: Win
-  isNextScene: 1
 --- !u!65 &714972495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2839,6 +2837,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1713228, y: 2.4514968, z: 1.0909324}
   m_Center: {x: -0.049598694, y: 0.16308677, z: -0.4454649}
+--- !u!95 &714972496
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714972489}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32b6e5a2f1d16904fb829f31d5fb9198, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &715719085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,7 +4485,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78e33173d09c2724788f81135fb22c55, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6ec1711061cec1d42905f2e2d0e20aca, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5251,7 +5270,7 @@ MonoBehaviour:
   mirror: {fileID: 806850250}
   pickedPieces: {fileID: 11400000, guid: 494c7311ab209f743ab047010f6a82f4, type: 2}
   spriteRenderer: {fileID: 1368011639}
-  fullSprite: {fileID: 21300000, guid: 09f3bd63d3887c44a964b97e91d5c8be, type: 3}
+  fullSprite: {fileID: 21300000, guid: 6cd70919e0bddd14d82d33fbced10663, type: 3}
 --- !u!212 &1368011639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5293,7 +5312,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e60b2e28efff35f4eab1445045a1b2a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d1e3e7522a47344a8e880382cc8202c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7183,7 +7202,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 61897c54de5c7d043b0a455ab3aa8d87, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f88b2e891220cc84a97c5b7f51c30b0a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

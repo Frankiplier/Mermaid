@@ -4402,7 +4402,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78e33173d09c2724788f81135fb22c55, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6ec1711061cec1d42905f2e2d0e20aca, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8565,7 +8565,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.59607846, g: 0.24552171, b: 0.38679248, a: 1}
+  m_Color: {r: 0.7075472, g: 0.21026166, b: 0.4114108, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 142.3
@@ -9350,7 +9350,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 61897c54de5c7d043b0a455ab3aa8d87, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f88b2e891220cc84a97c5b7f51c30b0a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

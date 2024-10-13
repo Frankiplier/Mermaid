@@ -9,7 +9,16 @@ public class Introduction : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         StartCoroutine(StartGame());
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
     IEnumerator StartGame()

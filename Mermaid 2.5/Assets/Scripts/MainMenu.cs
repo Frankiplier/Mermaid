@@ -14,13 +14,11 @@ public class MainMenu : MonoBehaviour
     {
         credits.SetActive(false);
         creditsEnabled = false;
-        
-        //gameObject.GetComponent<Button>().onClick.AddListener(Credits);
     }
 
     public void PlayGame()
     {
-        StartCoroutine(StartSound());
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Credits()
@@ -31,18 +29,6 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        StartCoroutine(ExitSound());
-    }
-
-    IEnumerator StartSound()
-    {
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(sceneName);
-    }
-
-    IEnumerator ExitSound()
-    {
-        yield return new WaitForSeconds(0.5f);
         Application.Quit();
     }
 }

@@ -23,9 +23,9 @@ public class Basilisk : MonoBehaviour
 
     void Start()
     {
-        gameplay.volume = 0.6f;
+        gameplay.volume = 0.5f;
 
-        targetTime = Random.Range(10, 15);
+        targetTime = Random.Range(10, 20);
         mustHide = false;
 
         basilisk.SetActive(false);
@@ -40,7 +40,7 @@ public class Basilisk : MonoBehaviour
         {
             StartCoroutine(Jumpscare());
 
-            targetTime = Random.Range(30, 60);
+            targetTime = Random.Range(20, 40);
         }
 
         else if (hide.isHiding == true)
@@ -66,7 +66,7 @@ public class Basilisk : MonoBehaviour
     IEnumerator Jumpscare()
     {
         danger.Play();
-        gameplay.volume = 0.3f;
+        gameplay.volume = 0.2f;
 
         mustHide = true;
 
@@ -102,6 +102,6 @@ public class Basilisk : MonoBehaviour
         mustHide = false;
         PauseMenu.canPause = true;
 
-        gameplay.volume = 0.6f;
+        gameplay.volume = 0.5f;
     }
 }

@@ -22,9 +22,9 @@ public class Crack : MonoBehaviour
         {
             spriteRenderer.sprite = openSprite;
             chestKey2.SetActive(true);
-            
+
             canOpen = false;
-            GetComponent<CapsuleCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
