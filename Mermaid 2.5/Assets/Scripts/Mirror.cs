@@ -7,6 +7,10 @@ public class Mirror : MonoBehaviour
     public bool canLook;
     public bool isActive = false;
     [SerializeField] GameObject mirror;
+    [SerializeField] MirrorInfo pickedPieces;
+
+    public SpriteRenderer spriteRenderer;
+    public Sprite fullSprite;
 
     void Start()
     {
@@ -28,6 +32,11 @@ public class Mirror : MonoBehaviour
         {
             mirror.SetActive(false);
             isActive = false;
+        }
+
+        else if (pickedPieces.pickedUpPieces[3] == true)
+        {
+           spriteRenderer.sprite = fullSprite;
         }
     }
 
