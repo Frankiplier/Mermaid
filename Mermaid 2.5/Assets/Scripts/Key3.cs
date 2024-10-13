@@ -5,7 +5,7 @@ using UnityEngine;
 public class Key3 : MonoBehaviour
 {
     [SerializeField] public KeyRoom3 keyRoom3;
-    [SerializeField] Crack crack;
+    [SerializeField] ChestKey2 crack;
     public AudioSource open;
     public bool canOpen = false;
 
@@ -21,13 +21,14 @@ public class Key3 : MonoBehaviour
     {
         if (canOpen == true && Input.GetKeyDown(KeyCode.E) && crack.chestKey2 == true)
         {
+            open.Play();
+            canOpen = false;
+
             spriteRenderer.sprite = openSprite;
             keyRoom3.haveKey3 = true;
             pickedPieces.pickedUpPieces[index] = true;
             
             GetComponent<CapsuleCollider>().enabled = false;
-
-            open.Play();
         }
     }
 

@@ -21,13 +21,14 @@ public class Key2 : MonoBehaviour
     {
         if (canOpen == true && Input.GetKeyDown(KeyCode.E) && picture.chestKey == true)
         {
+            open.Play();
+            canOpen = false;
+
             spriteRenderer.sprite = openSprite;
             keyRoom2.haveKey2 = true;
             pickedPieces.pickedUpPieces[index] = true;
             
             GetComponent<CapsuleCollider>().enabled = false;
-
-            open.Play();
         }
     }
 

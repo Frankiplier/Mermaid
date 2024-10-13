@@ -6,9 +6,14 @@ public class Crack : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite openSprite;
+    public GameObject chestKey2;
     
     public bool canOpen = false;
-    public bool chestKey2 = false;
+
+    void Start()
+    {
+        chestKey2.SetActive(false);
+    }
 
 
     void Update()
@@ -16,7 +21,7 @@ public class Crack : MonoBehaviour
         if (canOpen == true && Input.GetKeyDown(KeyCode.E))
         {
             spriteRenderer.sprite = openSprite;
-            chestKey2 = true;
+            chestKey2.SetActive(true);
         }
     }
 
