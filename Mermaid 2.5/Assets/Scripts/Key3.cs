@@ -6,7 +6,7 @@ public class Key3 : MonoBehaviour
 {
     [SerializeField] public KeyRoom3 keyRoom3;
     [SerializeField] Crack crack;
-
+    public AudioSource open;
     public bool canOpen = false;
 
     [SerializeField] MirrorInfo pickedPieces;
@@ -26,6 +26,8 @@ public class Key3 : MonoBehaviour
             pickedPieces.pickedUpPieces[index] = true;
             
             GetComponent<CapsuleCollider>().enabled = false;
+
+            open.Play();
         }
     }
 

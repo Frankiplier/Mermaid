@@ -6,6 +6,7 @@ public class Key2 : MonoBehaviour
 {
     [SerializeField] public KeyRoom2 keyRoom2;
     [SerializeField] Picture picture;
+    public AudioSource open;
     public bool canOpen = false;
 
     [SerializeField] MirrorInfo pickedPieces;
@@ -25,6 +26,8 @@ public class Key2 : MonoBehaviour
             pickedPieces.pickedUpPieces[index] = true;
             
             GetComponent<CapsuleCollider>().enabled = false;
+
+            open.Play();
         }
     }
 
