@@ -6,10 +6,16 @@ public class Picture : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite openSprite;
+    public GameObject chestKey1;
     
     public bool canOpen = false;
     public bool chestKey = false;
 
+
+    void Start()
+    {
+        chestKey1.SetActive(false);
+    }
 
     void Update()
     {
@@ -17,6 +23,8 @@ public class Picture : MonoBehaviour
         {
             spriteRenderer.sprite = openSprite;
             chestKey = true;
+
+            chestKey1.SetActive(true);
         }
     }
 

@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   credits: {fileID: 1768420126}
-  sceneName: Room 1
+  sceneName: Introduction
 --- !u!1 &1356119071
 GameObject:
   m_ObjectHideFlags: 0

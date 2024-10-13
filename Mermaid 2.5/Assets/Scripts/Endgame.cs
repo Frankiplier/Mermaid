@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Endgame : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-    public Sprite withoutKeySprite;
-
-    public Animator playerAnimation;
+    [SerializeField] Animator playerAnimation;
 
     public bool canPickUp = false;
     public bool canEnd = false;
@@ -15,6 +12,8 @@ public class Endgame : MonoBehaviour
     void Start()
     {
         StartCoroutine(LoadAnimation());
+
+        playerAnimation.Play("Keys jingling");
     }
 
     void Update()
@@ -22,7 +21,9 @@ public class Endgame : MonoBehaviour
         if (canPickUp == true && Input.GetKeyDown(KeyCode.E))
         {
             canEnd = true;
-            spriteRenderer.sprite = withoutKeySprite;
+            playerAnimation.Play("Keys stolen");
+
+
         }
     }
 
@@ -44,8 +45,6 @@ public class Endgame : MonoBehaviour
 
     IEnumerator LoadAnimation()
     {
-        yield return new WaitForSeconds(6f);
-
-        playerAnimation.Play("Dead");
+        yield return new WaitForSeconds(8f);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Key2 : MonoBehaviour
 {
     [SerializeField] public KeyRoom2 keyRoom2;
-    [SerializeField] Picture picture;
+    [SerializeField] ChestKey1 picture;
     public AudioSource open;
     public bool canOpen = false;
 
@@ -19,7 +19,7 @@ public class Key2 : MonoBehaviour
 
     void Update()
     {
-        if (canOpen == true && Input.GetKeyDown(KeyCode.E) && picture.chestKey == true)
+        if (canOpen == true && Input.GetKeyDown(KeyCode.E) && picture.chestKey1 == true)
         {
             open.Play();
             canOpen = false;

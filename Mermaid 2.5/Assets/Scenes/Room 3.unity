@@ -1246,14 +1246,14 @@ GameObject:
   - component: {fileID: 386062931}
   - component: {fileID: 386062932}
   - component: {fileID: 386062934}
-  - component: {fileID: 386062933}
+  - component: {fileID: 386062935}
   m_Layer: 0
   m_Name: Dead Monster
   m_TagString: Endgame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &386062929
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1333,9 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e5ab8fe65887346bb674259e1ded12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 386062929}
-  withoutKeySprite: {fileID: 21300000, guid: e0c9b58fabb61e848bd1589a3acc5f6a, type: 3}
-  playerAnimation: {fileID: 386062933}
+  playerAnimation: {fileID: 386062935}
   canPickUp: 0
   canEnd: 0
 --- !u!65 &386062932
@@ -1359,27 +1357,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6477058, y: 1.9683334, z: 0.7015505}
   m_Center: {x: -0.19218624, y: 0, z: 0.05837357}
---- !u!95 &386062933
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386062928}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5ea1afa8b85ab8449264bae6c853c2a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!136 &386062934
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1403,6 +1380,27 @@ CapsuleCollider:
   m_Height: 3.184
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.017755032}
+--- !u!95 &386062935
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386062928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5ea1afa8b85ab8449264bae6c853c2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &407163923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,8 +2799,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endgame: {fileID: 386062931}
   transitionAnim: {fileID: 606965846}
+  sceneInfo: {fileID: 11400000, guid: ddf38e7f62b635344bc979df91ac7799, type: 2}
   canUnlock: 0
   sceneName: Win
+  isNextScene: 1
 --- !u!65 &714972495
 BoxCollider:
   m_ObjectHideFlags: 0

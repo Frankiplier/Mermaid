@@ -7,8 +7,10 @@ public class Win : MonoBehaviour
 {
     [SerializeField] Endgame endgame;
     [SerializeField] Animator transitionAnim;
+    [SerializeField] public SceneInfo sceneInfo;
     public bool canUnlock = false;
     public string sceneName;
+    public bool isNextScene = true;
  
     void Update()
     {
@@ -40,6 +42,7 @@ public class Win : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        sceneInfo.isNextScene = isNextScene;
         SceneManager.LoadScene(sceneName);
     }
 }
