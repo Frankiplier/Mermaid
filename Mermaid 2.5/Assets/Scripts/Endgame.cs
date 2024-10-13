@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class Endgame : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
+    public Sprite withoutKeySprite;
+
+    public Animator playerAnimation;
+
     public bool canPickUp = false;
     public bool canEnd = false;
+
+    void Start()
+    {
+        StartCoroutine(LoadAnimation());
+    }
 
     void Update()
     {
         if (canPickUp == true && Input.GetKeyDown(KeyCode.E))
         {
             canEnd = true;
+            spriteRenderer.sprite = withoutKeySprite;
         }
     }
 
@@ -29,5 +40,12 @@ public class Endgame : MonoBehaviour
         {
             canPickUp = false;
         }
+    }
+
+    IEnumerator LoadAnimation()
+    {
+        yield return new WaitForSeconds(6f);
+
+        playerAnimation.Play("Dead");
     }
 }
