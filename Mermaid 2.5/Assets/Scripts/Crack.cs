@@ -2,30 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key3 : MonoBehaviour
+public class Crack : MonoBehaviour
 {
-    [SerializeField] public KeyRoom3 keyRoom3;
-    [SerializeField] Crack crack;
-
-    public bool canOpen = false;
-
-    [SerializeField] MirrorInfo pickedPieces;
-    [SerializeField] int index;
-    public bool canPickUp = false;
-
     public SpriteRenderer spriteRenderer;
     public Sprite openSprite;
+    
+    public bool canOpen = false;
+    public bool chestKey2 = false;
 
 
     void Update()
     {
-        if (canOpen == true && Input.GetKeyDown(KeyCode.E) && crack.chestKey2 == true)
+        if (canOpen == true && Input.GetKeyDown(KeyCode.E))
         {
             spriteRenderer.sprite = openSprite;
-            keyRoom3.haveKey3 = true;
-            pickedPieces.pickedUpPieces[index] = true;
-            
-            GetComponent<CapsuleCollider>().enabled = false;
+            chestKey2 = true;
         }
     }
 
